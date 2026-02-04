@@ -1,22 +1,12 @@
-
 #include <stdio.h>
 #include "isEven.h"
-
-int main(void) {
+#include "isOdd.h"
+int main() {
     int num;
-
-    printf("Enter integer: ");
-    if (scanf("%d", &num) != 1) {
-        printf("Invalid input.\n");
-        return 1;
-    }
-
-    if (isEven(num)) {
-        printf("%d is even.\n", num);
-    } else {
-        printf("%d is odd.\n", num);
-    }
-
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+    isEven(num);
+    isOdd(num);
     return 0;
 }
 

@@ -1,8 +1,8 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -std=c11
+CFLAGS = -Wall
 
 TARGET = lab2
-OBJS = main.o isEven.o
+OBJS = main.o isEven.o isOdd.o
 
 all: $(TARGET)
 $(TARGET): $(OBJS)
@@ -13,6 +13,10 @@ main.o: main.c isEven.h
 
 isEven.o: isEven.c isEven.h
 	$(CC) $(CFLAGS) -c isEven.c
+
+isOdd.o: isOdd.c isOdd.h
+	$(CC) $(CFLAGS) -c isOdd.c
+
 
 clean:
 	rm -f $(TARGET) $(OBJS)
